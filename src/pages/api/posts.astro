@@ -1,0 +1,6 @@
+---
+   const formData = await Astro.request.formData();
+   const content = formData.get("content").toString();
+---
+
+<div id="newContent" class="py-1" style="width: 200px;">{content}</div>
