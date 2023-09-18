@@ -5,7 +5,7 @@ import Layout from "../layouts/Layout.astro"
 <Layout>
 	<div style="height: calc(100% - 32px);" class="flex flex-row items-center justify-center container mx-auto gap-20">
 		<div>
-			<div transition:name="text-box" class="bg-orange-100 p-4 rounded-2xl" style="width: 300px;">
+			<div class="bg-orange-300 text-black  p-4 rounded-2xl text-lg" style="width: 300px;">
 				<div transition:name="title" transition:animate="fade" class="text-2xl">Hello</div>
 				<div class="mt-2">
 					This the portfolio of Jesper Holmlund made with Astro and Tailwind
@@ -17,8 +17,8 @@ import Layout from "../layouts/Layout.astro"
 				</div>
 			</div>
 		</div>
-		<div transition:name="image" transition:animate="fade">
-			<img style="max-width: 500px;" src="/images/amicofront.svg"/>
+		<div transition:name="image">
+			<img style="max-width: 400px;" src="/images/amicofront.svg"/>
 		</div>
 	</div>
 </Layout>
