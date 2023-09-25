@@ -3,22 +3,24 @@ import Layout from "../layouts/Layout.astro"
 ---
 
 <Layout>
-	<div style="height: calc(100% - 32px);" class="flex flex-row items-center justify-center container mx-auto gap-20">
-		<div>
-			<div class="bg-orange-300 text-black  p-4 rounded-2xl text-lg" style="width: 300px;">
+	<div class="flex md:flex-row flex-col items-center justify-center mx-auto gap-20 p-4 md:mt-20">
+		<div class="md:w-96">
+			<div class="bg-orange-300 text-black  p-4 rounded-2xl text-lg">
 				<div transition:name="title" transition:animate="fade" class="text-2xl">Hello</div>
 				<div class="mt-2">
 					This the portfolio of Jesper Holmlund made with Astro and Tailwind
 				</div>
 			</div>
-			<div class="p-4 rounded-2xl mt-4" style="width: 300px;">
+			<div class="p-4 rounded-2xl mt-4">
 				<div>
 					Lorem ipsum dolor sit amet consectetur. Massa libero natoque viverra amet nascetur imperdiet semper.
 				</div>
 			</div>
 		</div>
 		<div transition:name="image">
-			<img style="max-width: 400px;" src="/images/amicofront.svg"/>
+			<img class="md:w-96" src="/images/amicofront.svg"/>
+			    <div id="box">
+    </div>
 		</div>
 	</div>
 </Layout>
