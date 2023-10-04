@@ -1,0 +1,44 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import type { GetStaticPaths } from "astro";
+export const getStaticPaths = (async() => {
+    const posts = await getCollection("posts")
+    return posts.map((post)=>({
+        params: {slug: post.slug}, props: {post}
+    }))
+}) satisfies GetStaticPaths;
+const {post} = Astro.props
+const {Content} = await post.render()
+const today = new Date()
+---
+<Layout>
+    <div class=" mx-auto gap-20 md:mt-20 mt-6">
+		<div>
+			<div transition:name="image" class=" p-4 rounded-2xl mx-auto w-fit">
+				<div transition:name={`heading-${post.slug}`}  class="text-3xl text-center">{post.data.title}</div>
+				<img transition:name={`img-${post.slug}`} class="w-96"  src="/images/blog.svg"/>
+			</div>
+			<div transition:name={`footer-${post.slug}`} class="px-4 rounded-2xl  md:w-2/4 mx-auto">
+						<div style="width: 100%" class="mb-4 text-sm py-2 footer flex flex-row justify-start gap-4 border-b-2 border-neutral-100">
+							<div class="flex flex-row gap-2">
+								<i class="gg-comment "></i>
+								<span>1</span>
+							</div>
+							<div class="flex flex-row gap-2 items-center">
+								<i class="gg-calendar-dates"></i>
+								<span>{ Math.round((today - new Date(post.data.publishDate)) /(1000 * 60 * 60 * 24))}  days ago</span> 
+							</div>
+							<div class="flex flex-row gap-2 items-center">
+								<i class="gg-user"></i>
+								<span>by {post.data.author}</span>
+							</div>
+							
+					</div>	
+				<div class="text-xl">
+                    <Content></Content>
+				</div>
+			</div>
+		</div>
+	</div>
+</Layout>

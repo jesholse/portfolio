@@ -1,0 +1,36 @@
+---
+import type { GetStaticPaths } from "astro";
+import PaginationEntry from "../../components/PaginationEntry.astro"
+import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+export const getStaticPaths = (async({paginate}) => {
+    const posts = await getCollection("posts")
+    return paginate(posts, {pageSize: 2})
+}) satisfies GetStaticPaths;
+const {page} = Astro.props
+console.log(page)
+---
+<Layout>
+<div  class="flex items-center md:flex-row flex-col justify-center mt-4 md:w-1/2 mx-auto gap-20">
+	<div transition:name="image" class="mt-20" >
+		<img class="mx-auto" style="max-width: 300px;" src="/images/amicofront.svg"/>
+	</div>
+    <div class="flex flex-row-reverse justify-center gap-20 mt-8">
+		<div>
+			<div  class=" p-4 rounded-2xl text-center md:w-1/2" >
+				<div transition:name="title" class="text-4xl">Recent posts</div>
+			</div>
+            <div class="px-4 rounded-2xl">
+                {page.data.map((post)=>(
+                    <PaginationEntry author={post.data.author} slug={post.slug} title={post.data.title} excerpt={post.data.excerpt} date={post.data.publishDate}></PaginationEntry>
+                ))}
+                <div class="flex flex-row gap-2 justify-between">
+                    {page.url.prev ? <a class="block text-black p-2 rounded-lg underline underline-offset-3" href={page.url.prev}>Previous page</a> : null}
+                    {page.url.next ? <a class="block text-black p-2 rounded-lg underline underline-offset-3" href={page.url.next}>Next page</a> : null} 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</Layout>
+

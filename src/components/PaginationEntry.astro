@@ -1,0 +1,26 @@
+---
+const {title, slug, excerpt, author, date} = Astro.props
+const today = new Date()
+---
+
+<div class="border-b-2  py-4">
+    <a transition:name={`heading-${slug}`} class="text-medium text-xl font-medium" href={slug}>{title}</a>
+    <div class="flex flex-row gap-8 mt-4">
+        <img class=" w-48" transition:name={`img-${slug}`} src="/images/blog.svg"/>
+        <div class="line-clamp-1">{excerpt}</div>
+    </div>
+    <div transition:name={`footer-${slug}`} style="width: 100%" class="pt-2 pl-2 footer flex flex-row justify-start gap-4 text-sm">
+        <div class="flex flex-row gap-2">
+            <i class="gg-comment "></i>
+            <span>1</span>
+        </div>
+        <div class="flex flex-row gap-2 items-center">
+            <i class="gg-calendar-dates"></i>
+            <span>{ Math.round((today - new Date(date)) /(1000 * 60 * 60 * 24))} days ago</span> 
+        </div>
+        <div class="flex flex-row gap-2 items-center">
+            <i class="gg-user"></i>
+            <span>by {author}</span>
+        </div>
+    </div>					
+</div>
