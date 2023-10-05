@@ -8,7 +8,6 @@ export const getStaticPaths = (async({paginate}) => {
     return paginate(posts, {pageSize: 2})
 }) satisfies GetStaticPaths;
 const {page} = Astro.props
-console.log(page)
 ---
 <Layout>
 <div  class="flex items-center md:flex-row flex-col justify-center mt-4 md:w-1/2 mx-auto gap-20">
