@@ -1,0 +1,23 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { getEntry } from "astro:content";
+const about = await getEntry("pages", "about")
+console.log(about)
+const {Content} = await about.render()
+console.log(Content)
+---
+<Layout>
+      <div class=" mx-auto gap-20 md:mt-20 mt-6">
+		<div>
+			<div class="px-4 rounded-2xl  md:w-2/4 mx-auto">
+						<div style="width: 100%" class="mb-4 text-sm py-2 footer flex flex-row justify-start gap-4 border-b-2 border-neutral-100">
+				
+							
+					</div>	
+				<div class="text-xl [&>p]:mt-4">
+                    <Content></Content>
+				</div>
+			</div>
+		</div>
+	</div>
+</Layout>
