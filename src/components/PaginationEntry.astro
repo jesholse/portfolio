@@ -4,7 +4,7 @@ const today = new Date()
 ---
 
 <div class="border-b-2  py-4">
-    <a transition:name={`heading-${slug}`} class="text-medium text-xl font-medium" href={`https://jeshol.se/projects/${slug}`}>{title}</a>
+    <a transition:name={`heading-${slug}`} class="text-medium text-xl font-medium" href={`./${slug}`}>{title}</a>
     <div class="flex flex-row gap-8 mt-4">
         <img class=" w-48" transition:name={`img-${slug}`} src="/images/blog.svg"/>
         <div class="line-clamp-1">{excerpt}</div>
@@ -16,7 +16,7 @@ const today = new Date()
         </div>
         <div class="flex flex-row gap-2 items-center">
             <i class="gg-calendar-dates"></i>
-            <span>{ Math.round((today - new Date(date)) /(1000 * 60 * 60 * 24))} days ago</span> 
+            <span>0 days ago</span> 
         </div>
         <div class="flex flex-row gap-2 items-center">
             <i class="gg-user"></i>
