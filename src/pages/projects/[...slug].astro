@@ -17,7 +17,7 @@ const today = new Date()
 		<div>
 			<div transition:name="image" class=" p-4 rounded-2xl mx-auto w-fit">
 				<div transition:name={`heading-${post.slug}`}  class="text-3xl text-center">{post.data.title}</div>
-				<img transition:name={`img-${post.slug}`} class="w-96"  src="/images/blog.svg"/>
+				<img transition:name={`img-${post.slug}`} class="w-96 mt-4"  src={post.data.image}/>
 			</div>
 			<div transition:name={`footer-${post.slug}`} class="px-4 rounded-2xl  md:w-2/4 mx-auto">
 						<div style="width: 100%" class="mb-4 text-sm py-2 footer flex flex-row justify-start gap-4 border-b-2 border-neutral-100">
