@@ -10,6 +10,4 @@ This page is made with Astro.js, Tailwind css, view transitions API, pushed to G
 
 **View transition API** is used between pages. If two elements on different pages share the same transition-name they'll interact with each other. Thus, if element X is located 100 pixels from the top on page one and if element Y is located 300 pixels from the top on page two and if and only if both share the same transition-name, a page swap will render into one element that slides from place to place, that is up and down. The element will never leave the page but the content can change within the element and the element itself can change shape.
 
-New projects will be added locally in /src/content/projects as .md files. The name of .md file will turn into the slug of that particular project.Thus naming the file 'My Project.md' will lead to a new project on the entry point corresponding to the slug, in this case /projects/my-project
-
-
+New projects will be added locally in /src/content/projects as .md files. The name of .md file will turn into the slug of that particular project.Thus naming the file 'My Project.md' will lead to a new project on the entry point corresponding to the file name, i.e /projects/my-project

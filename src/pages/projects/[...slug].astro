@@ -21,7 +21,8 @@ const today = new Date()
 			</div>
 			<div transition:name={`footer-${post.slug}`} class="px-4 rounded-2xl  md:w-2/4 mx-auto">
 						<div style="width: 100%" class="mb-4 text-sm py-2 footer flex flex-row justify-start gap-4 border-b-2 border-neutral-100">
-							<div class="flex flex-row gap-2">
+							<div class="hidden">
+															<div class="flex flex-row gap-2">
 								<i class="gg-comment "></i>
 								<span>1</span>
 							</div>
@@ -32,10 +33,11 @@ const today = new Date()
 							<div class="flex flex-row gap-2 items-center">
 								<i class="gg-user"></i>
 								<span>by {post.data.author}</span>
+							</div>		
 							</div>
 							
 					</div>	
-				<div class="text-xl [&>p]:mt-2">
+				<div transition:animate="slide" class="text-xl [&>p]:mt-2">
                     <Content></Content>
 				</div>
 			</div>

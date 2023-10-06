@@ -10,9 +10,9 @@ export const getStaticPaths = (async({paginate}) => {
 const {page} = Astro.props
 ---
 <Layout>
-<div  class="flex items-center md:flex-row flex-col justify-center mt-4 mx-auto md:gap-20">
-	<div transition:name="image" class="mt-20" >
-		<img class="mx-auto" style="max-width: 300px;" src="/images/amicofront.svg"/>
+<div transition:animate="slide"  class="flex items-center md:flex-row flex-col justify-center mt-4 mx-auto md:gap-20">
+	<div transition:name="image" class="md:mt-20" >
+		<img class="mx-auto w-96 p-4" src="/images/amicofront.svg"/>
 	</div>
     <div class="flex flex-row-reverse justify-center gap-20 mt-8 w-fit">
 		<div>

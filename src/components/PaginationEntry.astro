@@ -9,7 +9,7 @@ console.log(Astro.props)
         <img class=" md:w-40 w-24" transition:name={`img-${slug}`} src={image}/>
         <div class="line-clamp-6 md:w-96 h-fit">{excerpt}</div>
     </div>
-    <div transition:name={`footer-${slug}`} style="width: 100%" class="pt-2 pl-2 footer flex flex-row justify-start gap-4 text-sm">
+    <div transition:name={`footer-${slug}`} style="width: 100%" class="pt-2 pl-2 footer flex flex-row justify-start gap-4 text-sm hidden">
         <div class="flex flex-row gap-2">
             <i class="gg-comment "></i>
             <span>1</span>
