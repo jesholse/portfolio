@@ -1,7 +1,9 @@
 ---
-title: "Project 3"
-image: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/681px-Placeholder_view_vector.svg.png
-excerpt: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultrices, mauris ac rutrum porta, metus lorem maximus odio, ac viverra neque quam vitae nisl. Suspendisse potenti. Fusce suscipit tellus nibh, et fringilla ligula tristique accumsan. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras ullamcorper rhoncus finibus. Vivamus ac purus nunc. Quisque sed tortor imperdiet nunc volutpat sagittis quis ac mi. Nunc non mauris enim. Curabitur vitae odio nibh. Nullam non enim ac nulla hendrerit ullamcorper non non dui. Sed sit amet metus massa. Sed convallis mollis auctor. Pellentesque eleifend purus ante, id cursus dui consectetur ut.
+title: "Book tracker"
+image: /images/project-book.png
+excerpt: The purpose of this site is to track books I've read and the focus are on books either by authors or books that play out in the northen Sweden. Books by the so called proletarian authors are also occuring frequently.
 ---
 
-**Upcoming**
+The purpose of this site is to track books I've read and the focus are on books either by authors or books that play out in the northen Sweden. Books by the so called proletarian authors are also occuring frequently. 
+
+https://tangerine-pika-e74e45.netlify.app/
