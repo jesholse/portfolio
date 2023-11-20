@@ -1,10 +1,11 @@
 ---
 import Head from "../components/Head.astro"
 import Navigation from "../components/Navigation.astro";
+const {title} = Astro.props
 ---
 
 <html lang="en" style="height: 100%">
-	<Head></Head>
+	<Head title={title}></Head>
 	<body class="">
 		<Navigation></Navigation>
 		<slot></slot>
