@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro"
 ---
 
 <Layout title="Index">
-	<div class="flex md:flex-row flex-col-reverse items-center justify-center mx-auto md:gap-20 gap-4 p-4 md:mt-20">
+	<div class="flex md:flex-row flex-col-reverse items-center justify-center mx-auto md:gap-20 gap-4 p-4 md:mt-20 mt-6 max-w-4xl">
 		<div class="md:w-96">
 			<div class="bg-orange-100 text-black  p-4 rounded-2xl text-lg">
 				<div transition:name="title" class="text-2xl text-center">Welcome!</div>
@@ -31,8 +31,8 @@ import Layout from "../layouts/Layout.astro"
 				</div>
 			</div>
 		</div>
-		<div>
-			<img  transition:name="image" class="md:w-96" src="/images/amicofront.svg"/>
+		<div transition:name="image">
+			<img  class="md:w-96 p-4" src="/images/amicofront.svg"/>
 			<div id="box">
     		</div>
 		</div>
